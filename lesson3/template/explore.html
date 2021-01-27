@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}explore page{% end %}
+{% block content %}
+I am explore <br>
+<!--<img src="/static/imgs/1.jpg" >-->
+
+<!--使用for循环输出图片-->
+{% for i in range(1,5) %}  <!--末尾记得加end-->
+<img src="{{ static_url('imgs/{}.jpg'.format(i) )}}" width="200px">  <br>
+{% end %}
+{% end %}

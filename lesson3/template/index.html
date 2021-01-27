@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}index page{% end %}
+{% block content %}
+I am index   <br>
+
+<!--<img src="/static/imgs/1.jpg"  width="200px" >-->
+
+<!--需要效果静态文件夹的名称使用-->
+<!--这样访问的时候实现从tupian这个路径开始访问图片  如：src="/tupian/imgs/1.jpg"-->
+<!--<img src="{{ static_url('imgs/1.jpg')}}" width="200px">-->
+
+
+<!--使用后端循环输出-->
+<!--前端修改内容-->
+{% for img_url in imgs %}
+<img src="{{ static_url(img_url) }}" > <br>
+{% end %}
+
+{% end %}
